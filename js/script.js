@@ -46,18 +46,27 @@ const peopleArray = [
     }
 ]
 
-const listElem = document.querySelector("ul");
+const listElem = document.querySelector(".row");
 let listContent = '';
 
 for (let i = 0; i < peopleArray.length; i++) {
     console.log(peopleArray[i]);
     listContent += `
-    <li>
-    <img src="img/${peopleArray[i].photo}" alt="official photo">
-    <h3>${peopleArray[i].name} ${peopleArray[i].lastName}</h3>
-    <div class="role">${peopleArray[i].job}</div>
-    </li>
+    <div class="col-4">
+        <div class="card my-2">
+            <img src="img/${peopleArray[i].photo}" class="card-img-top" alt="people's photo">
+            <div class="card-body text-center">
+                <h5 class="card-title">${peopleArray[i].name} ${peopleArray[i].lastName}</h5>
+                <p class="card-text text-center">${peopleArray[i].job}</p>
+            </div>
+        </div>
+    </div>
     `
+    // <li>
+    // <img src="img/${peopleArray[i].photo}" alt="official photo">
+    // <h3>${peopleArray[i].name} ${peopleArray[i].lastName}</h3>
+    // <div class="role">${peopleArray[i].job}</div>
+    // </li>
 };
 
 listElem.innerHTML = listContent;
