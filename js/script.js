@@ -46,9 +46,10 @@ const peopleArray = [
     }
 ]
 
-const listElem = document.querySelector("ul")
+const listElem = document.querySelector("ul");
 
 for (let i = 0; i <= peopleArray.length; i++) {
     console.log(peopleArray[i].name, peopleArray[i].lastName, peopleArray[i].job, peopleArray[i].photo);
-    listElem.innerHTML += `<ul>${peopleArray[i].name} ${peopleArray[i].lastName}, ${peopleArray[i].job}, ${peopleArray[i].photo}</ul>`
-}
+    listElem.innerHTML += `<li>${peopleArray[i].name} ${peopleArray[i].lastName}, ${peopleArray[i].job}, ${peopleArray[i].photo}</li>`
+};
+
